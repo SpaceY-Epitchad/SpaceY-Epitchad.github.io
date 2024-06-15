@@ -121,16 +121,19 @@
           </h2>
           <p>
             Nous créons, vous jouez.
+            <br><br><br>
           </p>
-          <br>
-          <a href="https://www.mediafire.com/file/15ym7oskgrbki3x/SpaceY.zip/file"><img src="images/download_btn.png" alt="" width="250px"></a>
-          <p>Télécharger la dernière version disponible de SpaceY.</p>
-          <p>La version finale de SpaceY n'étant pas terminée, cette version n'est pas complète mais allégée et fonctionnelle.</p>
-          <br><br>
+          <p><strong>Nous recherchons des citoyens motivés et courageux pour participer à une mission révolutionnaire : ALLER SUR LA LUNE.</strong><br><br>
+            Face à la détermination de la nation ennemie de nous devancer, nous devons relever ce défi historique. Cette course vers la lune sera un tournant décisif pour notre pays, et nous avons besoin de votre engagement et de votre bravoure.
+            Devenez un héros de notre époque et inscrivez-vous dès maintenant pour cette aventure inédite. Ensemble, nous écrirons l'histoire. <br> <br>
+            <strong>Cliquez ici pour rejoindre la mission.</strong>
+            </p>
+          <a href="https://www.mediafire.com/file/x3trh67a2iuuevs/SpaceY.zip/file"><img src="images/download_btn.png" alt="" width="250px"></a>
+          <p><br><strong>Rapport de la soutenance de mars</strong></p>
           <a href="EpitchadRapportSoutenance.pdf"><img src="images/download_btn.png" alt="" width="250px"></a>
-          <p>Télécharger notre dernier rapport de soutenance.</p>
-          <br><br>
-          <p>Et <a href="https://www.francetvinfo.fr/pictures/JyU1OsHtMgm8wMPLsINs32GNgug/0x0:635x357/2656x1494/filters:format(avif):quality(50)/2016/08/23/internet-troll.jpg" target="_blank">cliquez ici</a> pour vous faire troll.</p>
+          <p><br><strong>Rapport de la soutenance de juin</strong></p>
+          <a href=""><img src="images/download_btn.png" alt="" width="250px"></a>
+          <p><br>Et <a href="https://www.francetvinfo.fr/pictures/JyU1OsHtMgm8wMPLsINs32GNgug/0x0:635x357/2656x1494/filters:format(avif):quality(50)/2016/08/23/internet-troll.jpg" target="_blank">cliquez ici</a> pour vous faire troll.</p>
           <p>Ou bien <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">ici</a> pour vous faire troll en musique.</p>
         </div>
         <div class="row">
@@ -256,32 +259,40 @@
                 <a href="https://docs.google.com/document/d/1hld05xqIQa_cGiDcGUzqjOTHzCdMEabPsvOstOHcw-g/edit?usp=sharing" target="_blank">Sources</a>
               </p>
               <br><br>
-              <h3>Historique du projet</h3>
-              <p>
-                En commençant la réalisation de SpaceY, nous avons tout d'abord établi les bases :
-                 nous avions besoin d'une "base" fondamentale afin d'y implémenter toutes les fonctionnalités du jeu.
-                 Pour ce faire, nous avons commencé par le développement de la map. C'est Maurin, chef de projet qui était en 
-                 charge de cette partie importante.
-              </p>
-              <p>
-                Durant environ une semaine de travail intensif, avec la contribution importante de Maxandre et Madin, nous avons créé cette map,
-                qui, encore aujourd'hui présente certains défauts de conception. Comme expliqué en détail dans notre rapport de soutenance, nous avons du employer une 
-                méthode que nous ne souhaitions pas employer. Nous avons utilisé une tilemap sur laquelle nous avons au préalable placé les astéroïdes, puis nous les 
-                supprimons au fur et à mesure que la map se génere.
-              </p>
-              <p>
-                Ensuite nous avons travaillé plus individuellement sur plusieurs parties. Il est important de noté que ces parties "individuelles" ont tout de même été
-                réalisées dans l'entraide permanente.
-              </p>
-              <p>
-                Madin a commencé par la réalisation des intéractions du pesonnages tel que les déplacements et les animations, Maxandre s'est occupé de l'intelligence artificielle 
-                des aliens etc... 
-              </p>
-              <p>
-                Comme indiqué dans le rapport de soutenance, nous avons terminé plusieurs autres parties que nous développons en détail. 
-                Ce rapport est disponible sur la page "jeu" de notre site internet, disponible via le bouton ci-dessous.
-              </p>
-              <a href="service.html">Jeu</a>
+              <h3>Historique et chronologie du projet</h3>
+              <ol>
+                <li>Map</li>
+                <li>Astéroïdes</li>
+                <li>Assets graphiques</li>
+                <li>Fusée</li>
+                <li>Personnage</li>
+                <li>Site Internet</li>
+                <li>GUI</li>
+                <li>Réseau multijoueur</li>
+                <li>Stations</li>
+                <li>Laser</li>
+                <li>Conditions de victoire</li>
+                <li>Aliens</li>
+                <li>Assets sonores</li>
+                <li>Ressources et récolte</li>
+                <li>HUD</li>
+              </ol>
+
+              <br><br><br>
+              <h3>Problèmes</h3>
+              <ul>
+                <li>Génération de la map : le pathfinding des aliens n'était pas fonctionnel à cause de la disposition de la tilemap.</li>
+                <li>Emoticônes : les instances se jouaient sur tous les joueurs de la partie.</li>
+                <li>Syncrhonisation multijoueur : les animations, apparitions et déplacements n'étaient parfois pas les mêmes chez chaque joueur.</li>
+              </ul>
+
+              <h3>Solutions</h3>
+              <ul>
+                <li>Pathfinding : nous avons ajouté des cases de navigation entre les astéroïdes.</li>
+                <li>Emoticônes : nous avons utilisé un noeud MultiplayerSynchronizer pour jouer une émoticône.</li>
+                <li>Syncrhonisation multijoueur : utilisation du RPC et des noeuds de syncrhonisations pour ajouter des variables à exporter chez chaque joueur.</li>
+              </ul>
+
           </div>
         </div>
       </div>
@@ -295,7 +306,7 @@
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
-          Notre <span> équipe</span>
+          L'équipe <span> de choc</span>
         </h2>
       </div>
 
@@ -311,25 +322,8 @@
                   Maurin Audenard
                 </h5>
                 <p>
-                  Chef de Projet & Map Design
+                  Leader incontesté (malgré lui)
                 </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://fr.linkedin.com/in/maurin-audenard-320b71298" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -343,25 +337,8 @@
                   Madin Amrane
                 </h5>
                 <p>
-                  Développement & Graphisme
+                  L'étranger (الغريب)
                 </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/madin-amrane-5041b02b3/" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -375,25 +352,8 @@
                   Olaf Piniarski
                 </h5>
                 <p>
-                  DA & GUI
+                  Lewandowski (wish version)
                 </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/olaf-piniarski-a97ba929a/" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -407,25 +367,8 @@
                   Théodore Bechetoille
                 </h5>
                 <p>
-                  Développement & GUI
+                  Le meilleur agent secret : on l'a jamais vu.
                 </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -436,28 +379,11 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  <a href="https://maxx-bl.github.io/" target="_blank">Maxandre Berson-Lefuel</a>
+                  Maxandre Berson-Lefuel
                 </h5>
                 <p>
-                  Réseau, IA & Website
+                  #640 FR sur Clash Royale
                 </p>
-              </div>
-              <div class="social_box">
-                <a href="https://maxx-bl.github.io/" target="_blank">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://maxx-bl.github.io/" target="_blank">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/max-bl-14a1b6272/?originalSubdomain=fr" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="https://maxx-bl.github.io/" target="_blank">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://maxx-bl.github.io/" target="_blank">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -497,7 +423,14 @@
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
                 <p>
-                  Une expérience enrichissante. En tant que développeur, je suis fier de contribuer à ce projet qui offre des perspectives de jeu variées !
+                  Petit avec des lunettes, c'est moi le cliché de l'équipe. Mis à
+                  part les jeux compétitifs et l'eSport, j'adore explorer l'antre
+                  secrète des documentations (notamment celle de Godot, qu'est ce
+                  qu'elle est bien faite) même si StackOverflow reste mon meilleur
+                  ami. Ayant pu travailler en équipe tout au long de l'année, ce
+                  projet m'a permis de découvrir divers outils que j'utilise
+                  maintenant tous les jours ! Responsable du multijoueur, c'est
+                  en effet moi qui ai créé le plus de bugs sur SpaceY...
                 </p>
               </div>
             </div>
@@ -520,7 +453,14 @@
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
                 <p>
-                  C'est un honneur de diriger ce projet ambitieux qui m'apportera beaucoup autant sur le plan technique que relationnel.
+                  Le généralisisme, le grand manitou, le marabou, ou autrement
+                  chef de groupe, Maurin à été obligé d'être chef de groupe car
+                  les gens de son groupe sont des grosses tapettes.
+                  Fan de poussins et de LATEX (les deux séparés bien évidemment),
+                  il aime passer ses soirées sur Overleaf pour replacer une image
+                  à droite de la page. <br>
+                  Il se fait régulièrement racketer sa tablette par Madin afin de
+                  faire des ptits astronautes. 
                 </p>
               </div>
             </div>
@@ -543,7 +483,14 @@
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
                 <p>
-                  Je suis fier et très heureux d'avoir participé à ce projet pour tout ce qu'il m'a approté comme connaissances que ce soit dans le domaine informatique ou social.
+                  Un jeune être humain, bien que certains aient encore des doutes,
+                  en relation incertaine avec le sommeil. Il profite de chaque occasion
+                  pour faire la propagande de ses jeux et mangas favoris. Il s'est
+                  occupé du joueur,  des ressources, de <s>râler parce qu'il n'arrivait
+                    pas à rendre le jeu aussi beau qu'il le voulait</s> la partie graphique
+                  de jeu, et de l'interface utilisateur pendant la partie. C'est un
+                  très grand fan de la vidéo "The ultimate introduction to Godot 4" de
+                  Clear code sur laquelle il a passé son année.
                 </p>
               </div>
             </div>
@@ -566,7 +513,12 @@
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
                 <p>
-                  C'est une opportunité unique de pouvoir contribuer au développement de SpaceY. Ce projet me permettra de progresser en tant que développeur et également en tant que personne.
+                  Polonais, blond et discret. Quels meilleurs adjectifs pour décrire Olaf ?
+                  Pas spécialement fan des jeux vidéos il est ce qu’on appelle un “pokémon
+                  rare” d’Epita. C’est donc avec ses connaissances amoindries qu’il s’est
+                  occupé de l'implémentation de l'interface graphique (en tout cas essayer),
+                  conceptualisation et communication de SpaceY. Il a très envie d’un S4 au
+                  Japon comme 99% d'Epita.
                 </p>
               </div>
             </div>
@@ -589,8 +541,7 @@
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </div>
                 <p>
-                  Avoir l'opportunité de contribuer au projet SpaceY en tant que développeur est un honneur. Ce projet m'a fait grandir et m'a permit de tisser de nouveaux liens.
-                </p>
+                  Il se caractérise par sa vitesse d'avancement, doucement au début, pas trop vite à la fin.
               </div>
             </div>
           </div>
